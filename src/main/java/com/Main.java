@@ -6,8 +6,6 @@ import java.security.*;
 public class Main {
 
     public static void main(String[] args) throws NoSuchProviderException, NoSuchAlgorithmException {
-        System.out.println("Securitatea Informaționala. Lab 3");
-
         System.out.println("\nTest 1");
 
         /**
@@ -31,14 +29,14 @@ public class Main {
         /**
          * Semnare.
          */
-        BigInteger[] signature = dsa.generateSignature("hello SI".getBytes(), x);
+        BigInteger[] signature = dsa.generateSignature("Semnatura".getBytes(), x);
 
         /**
          * Verificare.
          */
-        boolean result = dsa.verifySignature("hello SI".getBytes(), signature, y);
+        boolean result = dsa.verifySignature("Semnatura".getBytes(), signature, y);
 
-        System.out.println("Input and output matches: " + result);
+        System.out.println("Veritabil: " + result);
 
         System.out.println("\nTest 2");
 
@@ -55,13 +53,13 @@ public class Main {
         /**
          * Semnare.
          */
-        signature = dsa.generateSignature("hello SI".getBytes(), x);
+        signature = dsa.generateSignature("Semnatura".getBytes(), x);
 
         /**
          * Verificare.
          */
-        result = dsa.verifySignature("hello si".getBytes(), signature, y);
+        result = dsa.verifySignature("semnatura".getBytes(), signature, y);
 
-        System.out.println("Input and output matches: " + result);
+        System.out.println("Veritabil: " + result);
     }
 }

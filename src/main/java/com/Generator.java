@@ -1,4 +1,4 @@
-package wtf;
+package com;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
